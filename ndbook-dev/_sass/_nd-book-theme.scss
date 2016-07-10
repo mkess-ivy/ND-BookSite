@@ -1,0 +1,32 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+.nd-header { padding: 10px; display: inline-block; width: 100%; }
+.nd-logo { text-transform: uppercase; font-family: $font-2; color: $brand-color; padding-left: 30px; float: left; display: inline-block; }
+.nd-menu { display: inline-block; float: right; padding-right: 50px; }
+.nd-menu-properties { text-transform: uppercase; border: 2px solid $brand-color; padding: 4px 15px; margin-right: 15px; font-size: 0.8em; color: $brand-color; }
+.nd-menu-properties:last { margin-right: none; }
+
+.nd-intro-section { padding: 2em 0 12em 0;  }
+.nd-intro-hero {
+	background-image: url('/assets/images/author-nicoleduncan.png');
+	background-size: cover;
+	height: 190vh;
+	position: relative;
+	margin: 30px 0 0 65px;
+	width: 30%;
+	float: left;
+}
+.nd-intro-text { float: left; width: 60%; text-align: center; }
+.nd-intro-text_title { padding: 2em 0; font-size: 4em; font-family: $font-3;  }
+
+.nd-blockquote_container { padding-left: 5em; }
+.nd-blockquote { text-align: left; font-family: $base-font-family; padding-bottom: 7em; font-weight: 200;}
+.nd-blockquote_author { text-align: right; padding: 1em 5em 0 0; font-size: 0.8em; color: $brand-color; line-height: 1.3em;}
+
+.nd-book-section { background: #EEEDEE; background-image: url('/assets/images/pattern-dark.png'); padding: 5px; position: relative; }
+.nd-book_img { width: 40%; float: left; }
+.nd-book_text { width: 50%; float: left; }
+
+.clear { clear: both; }
