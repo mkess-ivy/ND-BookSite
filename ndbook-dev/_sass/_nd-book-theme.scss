@@ -8,6 +8,7 @@
 .nd-menu-properties { text-transform: uppercase; border: 2px solid $brand-color; padding: 4px 15px; margin-right: 15px; font-size: 0.8em; color: $brand-color; }
 .nd-menu-properties:last { margin-right: none; }
 
+
 .nd-intro-section { padding: 2em 0 12em 0;  }
 .nd-intro-hero {
 	background-image: url('/assets/images/author-nicoleduncan.png');
@@ -25,8 +26,9 @@
 .nd-blockquote { text-align: left; font-family: $base-font-family; padding-bottom: 7em; font-weight: 200;}
 .nd-blockquote_author { text-align: right; padding: 1em 5em 0 0; font-size: 0.8em; color: $brand-color; line-height: 1.3em;}
 
-.nd-book-section { background: #EEEDEE; background-image: url('/assets/images/pattern-dark.png'); padding: 5px; position: relative; }
+.nd-book-section { background: #EEEDEE !important; background-image: url('/assets/images/pattern-dark.png'); padding: 5px; position: relative; }
 .nd-book_img { width: 40%; float: left; }
 .nd-book_text { width: 50%; float: left; }
 
 .clear { clear: both; }
+.nd-section { background: red; padding: 5em 0; position: relative;  }
