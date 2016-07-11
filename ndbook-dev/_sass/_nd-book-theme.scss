@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 
-.nd-header { padding: 10px; display: inline-block; width: 100%; }
+.nd-header { padding: 10px; display: inline-block; width: 100%; background: #fff; position: fixed; z-index: 3;}
 .nd-logo { text-transform: uppercase; font-family: $font-2; color: $brand-color; padding-left: 30px; float: left; display: inline-block; }
 .nd-menu { display: inline-block; float: right; padding-right: 50px; }
 .nd-menu-properties { text-transform: uppercase; border: 2px solid $brand-color; padding: 4px 15px; margin-right: 15px; font-size: 0.8em; color: $brand-color; }
@@ -32,3 +32,9 @@
 
 .clear { clear: both; }
 .nd-section { background: red; padding: 5em 0; position: relative;  }
+
+
+/* Setting up wireframe */
+.block-section { padding: 10em 0; text-align: center; text-transform: uppercase;}
+.blue { background: #c4c4c4; }
+.gray { background: #3e3e3e; }
