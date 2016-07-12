@@ -35,6 +35,25 @@
 
 
 /* Setting up wireframe */
-.block-section { padding: 10em 0; text-align: center; text-transform: uppercase;}
+.block-section { padding: 5em 0; position: relative;}
 .blue { background: #c4c4c4; }
 .gray { background: #3e3e3e; }
+.block-testimonial { width: 60%; padding: 2em 0; float: right; position: relative; margin-right: 3em;}
+.block-author { text-align: right; padding: 1em 6em 1em 0; }
+.block-link_section { position: absolute; top: -2em; width: 55px; height: 55px; right: 50%; background: #444666; border-radius: 50%; text-align: center;}
+
+
+/* Clearfix Hack */
+.clearfix:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+     }
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* close commented backslash hack */
