@@ -41,6 +41,19 @@
 .block-testimonial { width: 60%; padding: 2em 0; float: right; position: relative; margin-right: 3em;}
 .block-author { text-align: right; padding: 1em 6em 1em 0; }
 .block-link_section { position: absolute; top: -2em; width: 55px; height: 55px; right: 50%; background: #444666; border-radius: 50%; text-align: center;}
+.block-book { width: 35%; margin-left: 7em; position: relative; float: left;}
+.block-book_text { width: 40%; float: left; margin-left: 5em; }
+/*.block-book_bigtext { color: white; font-size: 2em; font-weight: 200; }*/
+.btn { border: 2px solid; width: 8em; display: block; border-radius: 5px; }
+.block-paragraph_container { padding: 1em 0; width: 80%; margin: 0 auto; }
+.block-paragraph { width: 49.5%; float: left; }
+.block-col { padding: 1em 0; float: left; }
+.block-col1 { width: 40%; padding-left: 1em;}
+.block-col2 { width: 55%; }
+.block-newsletter_container { padding: 1em 0; }
+.block-tour_col { width: 40%; float: left; }
+.block-download { width: 50%; text-align: center; margin: 0 auto; }
+.block-img { text-align: center; }
 
 
 /* Clearfix Hack */
