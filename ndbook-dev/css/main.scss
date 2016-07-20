@@ -31,6 +31,7 @@ $on-laptop:			1100px;
 $on-palm-wide:      900px;
 $on-palm:			750px;
 $on-mobile-wide:	550px;
+$on-squeeze:		380px;
 
 
 @mixin laptop { 
@@ -53,6 +54,12 @@ $on-mobile-wide:	550px;
 
 @mixin mobile-wide { 
     @media screen and (max-width: #{$on-mobile-wide}) {
+        @content;
+    }
+}
+
+@mixin squeeze { 
+    @media screen and (max-width: #{$on-squeeze}) {
         @content;
     }
 }
