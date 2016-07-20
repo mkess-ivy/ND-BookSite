@@ -5,10 +5,10 @@
 /* Header */
 .nd-header { padding: 10px; display: inline-block; width: 100%; background: #fff; position: fixed; z-index: 3;}
 .sticky-header { background: #D5843C !important; }
-.nd-logo { text-transform: uppercase; font-family: $font-2; color: $brand-color; padding-left: 30px; float: left; display: inline-block; 
+.nd-logo a { text-transform: uppercase; font-family: $font-2; color: $brand-color; padding-left: 30px; float: left; display: inline-block; 
     @include mobile-wide { float: none; text-align: center; width: 100%; padding-bottom: 2em; padding-left: 0; }
 }
-.sticky-logo { color: #fff !important; }
+.sticky-logo a { color: #fff !important; }
 .nd-menu { display: inline-block; float: right; padding-right: 50px; 
     @include mobile-wide { width: 100%; text-align: center; padding-right: 0; float: none; }
 }
