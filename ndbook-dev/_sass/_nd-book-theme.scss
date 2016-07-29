@@ -57,10 +57,10 @@
 /*.blue { background: #c4c4c4; }
 .gray { background: #3e3e3e; }*/
 
-.nd-wrapper { margin: 0 6em; 
-    @include laptop { margin: 0 4em; }
-    @include palm-wide { margin: 0 2em; }
-    @include mobile-wide { margin: 0 1em; }
+.nd-wrapper { width: 1100px; margin: 0 auto;
+    @include laptop { width: 750px; }
+    /*@include palm-wide { margin: 0 2em; }
+    @include mobile-wide { margin: 0 1em; }*/
 }
 .block-hero_v2 { float: left; position: absolute; left: 15em; 
     @include laptop { left: 6em; }
@@ -91,29 +91,30 @@
     @include squeeze { right: 42%; }
 }
 .block-link_target { color: white; text-transform: uppercase; font-size: 0.9em; }
-.block-book { width: 40%; /*margin-left: 7em;*/ position: relative; float: left; text-align: center;
+.block-book { width: 35%; position: relative; float: left; text-align: center; padding-top: 3em;
     @include palm { float: none; margin: 0 auto; }
     @include squeeze { width: 65%; }
 }
 .block-book_text { width: 59%; float: left; /*margin-left: 5em;*/ 
     @include palm { width: 100%; margin-bottom: 4em; }
 }
-.block-book_bigtext { font-size: 2em; font-weight: 300; padding: 2em 0 3em 0; text-align: center; width: 59%; margin: 0 auto;
+.block-book_bigtext { font-size: 2em; font-weight: 300; padding: 2em 0; text-align: center; width: 75%; margin: 0 auto;
     @include laptop { width: 85%; }
     @include mobile-wide { font-size: 1.7em; }
     @include squeeze { width: 100%; }
 }
-.block-book_smalltext { width: 50%; margin: 0 auto; font-size: 1em;  padding-bottom: 3em; line-height: 1.3em; 
+.block-book_smalltext { width: 60%; margin: 0 auto; font-size: 1.2em;  padding-bottom: 3em; line-height: 1.3em; 
     @include laptop { width: 70%; }
     @include squeeze { width: 85%; font-size: 1.2em; line-height: 1.6em; }
 }
 .btn { border: 2px solid $brand-color; width: 8em; display: block; border-radius: 5px; padding: .5em 0;}
+.btn:hover { border: 2px solid #000; }
 .btn-brand { text-align: center;margin: 0 auto; text-transform: uppercase;}
 .block-paragraph_container { padding: 1em 0; width: 80%; margin: 0 auto; 
     @include laptop { width: 95%; }
     @include palm-wide { width: 100%; }
 }
-.block-paragraph { width: 50%; float: left; 
+.block-paragraph { width: 50%; float: left; padding: 0 2em;
     @include laptop { padding-right: 2em; }
     @include palm-wide { padding-right: 1em; }
     @include palm { width: 85%; float: none; margin: 0 auto; padding-right: 0; }
@@ -131,7 +132,7 @@
 .block-col1 { width: 40%; padding-left: 1em;
     @include palm { width: 90%; margin: 0 auto; padding: 0; }
 }
-.block-col2 { width: 59%; padding-top: 5em;
+.block-col2 { width: 55%; padding-top: 5em; float: right;
     @include laptop { padding-top: 3em; }
     @include palm { width: 85%; margin: 0 auto; }
     @include mobile-wide { width: 100%; }
@@ -153,8 +154,9 @@
     @include mobile-wide { width: 100%; }
 }
 .block-tour_city { font-size: 0.9em; }
+.block-tour_city-name { font-style: italic; padding-top: 1em; display: block; }
 
-.block-download { width: 50%; text-align: center; margin: 0 auto; font-size: 37px; font-weight: lighter; padding-bottom: 1em; 
+.block-download { width: 50%; text-align: center; margin: 0 auto; font-size: 2em; font-weight: lighter; padding-bottom: 1em; 
     @include laptop { width: 65%; font-size: 32px; }
     @include mobile-wide { width: 95%; }
 }
