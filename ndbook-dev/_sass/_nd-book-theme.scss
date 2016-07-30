@@ -6,19 +6,19 @@
 .nd-header { padding: 10px; display: inline-block; width: 100%; background: #fff; position: fixed; z-index: 3;}
 .sticky-header { background: #D5843C !important; }
 .nd-logo a { text-transform: uppercase; font-family: $font-2; color: $brand-color; padding-left: 30px; float: left; display: inline-block; 
-    @include mobile-wide { float: none; text-align: center; width: 100%; padding-bottom: 2em; padding-left: 0; }
+    @include palm { float: none; text-align: center; width: 100%; padding-bottom: 2em; padding-left: 0; }
 }
 .sticky-logo a { color: #fff !important; }
 .nd-menu { display: inline-block; float: right; padding-right: 50px; 
-    @include mobile-wide { width: 100%; text-align: center; padding-right: 0; float: none; }
+    @include palm { width: 100%; text-align: center; padding-right: 0; float: none; }
 }
 .nd-menu-properties a { text-transform: uppercase; border: 2px solid $brand-color; padding: 4px 15px; margin-right: 15px; font-size: 0.8em; color: $brand-color; 
-    @include mobile-wide { margin-right: 0; }
+    /*@include mobile-wide { margin-right: 0; }*/
 }
 .sticky-menu-properties a { border-color: #fff !important; color: #fff !important; }
 .sticky-menu-properties a:hover { border-color: #000 !important; color: 000 !important; }
 .nd-menu-properties.last { margin-right: none; 
-    @include mobile-wide { margin-left: 15px; }
+    /*@include mobile-wide { margin-left: 15px; }*/
 }
 .home-link_sticky { color: #fff !important; }
 .home-link_sticky:hover { color: #000 !important; }
@@ -59,30 +59,34 @@
 
 .nd-wrapper { width: 1100px; margin: 0 auto;
     @include laptop { width: 850px; }
-    /*@include palm-wide { margin: 0 2em; }
-    @include mobile-wide { margin: 0 1em; }*/
+    @include palm-wide { width: 750px; }
+    @include palm { width: 500px; }
+    @include mobile-wide { width: 370px; }
+    @include squeeze { width: 300px; }
 }
 .block-hero_v2 { float: left; position: absolute; left: 15em; 
     @include laptop { left: 6em; }
     @include palm-wide { left: 2em; }
-    @include palm { left: 1em; }
-    @include mobile-wide { left: 11em; top: 23em; }
-    @include squeeze { left: 5em; top: 30em;}
+  /*  @include palm { left: 1em; }*/
+    @include palm { left: 37%; top: 30%; }
+    @include squeeze { left: 28%; top: 34%;}
 }
 .nicole { width: 14em; 
-    @include palm { opacity: 0.5; }
-    @include mobile-wide { opacity: 0.3; width: 12em;}
+    /*@include palm { opacity: 0.5; }*/
+    @include palm { opacity: 0.3; width: 12em;}
 
 }
 .block-testimonial { width: 52%; padding: 2em 0; float: right; position: relative; margin-right: 5em;
     @include laptop { width: 60%; margin-right: 1em; }
     @include palm { width: 100%; margin-right: 0;}
 }
-.block-testimonial_title { font-family: $font-3; font-size: 3em; text-align: center; padding-bottom: 1.5em; width: 90%; margin: 0 auto;}
+.block-testimonial_title { font-family: $font-3; font-size: 3em; text-align: center; padding-bottom: 1.5em; width: 90%; margin: 0 auto;
+    @include mobile-wide { font-size: 2.5em; }
+}
 .block-testimonial_text { width: 75%; margin: 0 auto; 
     @include laptop { width: 90%; }
-    @include palm { width: 60%; float: right; }
-    @include mobile-wide { width: 90%; float: none; margin: 0 auto; }
+    /*@include palm { width: 60%; float: right; }*/
+    @include palm { width: 90%; float: none; margin: 0 auto; }
 }
 .block-author { text-align: right; padding: 1em 3em 1em 0; color: $brand-color;}
 .block-link_section { position: absolute; top: -2em; width: 55px; height: 55px; right: 50%; background: $brand-color; border-radius: 50%; text-align: center; padding-top: 15px;
@@ -93,7 +97,7 @@
 .block-link_target { color: white; text-transform: uppercase; font-size: 0.9em; }
 .block-book { width: 35%; position: relative; float: left; text-align: center; padding-top: 3em;
     @include laptop { width: 40%; }
-    @include palm { float: none; margin: 0 auto; }
+    @include palm { float: none; margin: 0 auto; width: 50%;}
     @include squeeze { width: 65%; }
 }
 .block-book_text { width: 59%; float: left; /*margin-left: 5em;*/ 
@@ -118,7 +122,7 @@
 .block-paragraph { width: 50%; float: left; padding: 0 2em;
     @include laptop { padding-right: 2em; }
     @include palm-wide { padding-right: 1em; }
-    @include palm { width: 85%; float: none; margin: 0 auto; padding-right: 0; }
+    @include palm { width: 85%; float: none; margin: 0 auto; padding: 0; }
 }
 .block-paragraph.last {
     @include laptop { padding-left: 2em; }
@@ -135,7 +139,7 @@
 }
 .block-col2 { width: 55%; padding-top: 5em; float: right;
     @include laptop { padding-top: 3em; }
-    @include palm { width: 85%; margin: 0 auto; }
+    @include palm { width: 100%; margin: 0 auto; }
     @include mobile-wide { width: 100%; }
 }
 .block-newsletter_container { padding: 4em 0; width: 80%; margin: 0 auto; text-align: center; 
@@ -145,21 +149,25 @@
     @include palm-wide { width: 100%; }
 }
 .block-tour_col { width: 50%; float: left; 
-    @include squeeze { width: 85%; float: none; margin: 0 auto; }
+    @include palm { width: 70%; float: none; margin: 0 auto; }
+    @include squeeze { width: 85%; }
 }
 .block-tour_group { padding: 1em; text-align: center; width: 75%; margin: 0 auto; 
+    @include laptop { width: 95%; }
     @include palm-wide { width: 90%; padding: 0.4em; margin-bottom: 2em; }
 }
 .block-tour_day { text-transform: uppercase; font-weight: bold; font-size: 1.3em; }
 .block-tour_title { font-size: 2.5em; font-family: $font-3; width: 80%; text-align: center; margin: 0 auto; 
-    @include mobile-wide { width: 100%; }
+    @include palm-wide { width: 100%; }
+    /*@include mobile-wide { width: 100%; }*/
 }
 .block-tour_city { font-size: 0.9em; }
 .block-tour_city-name { font-style: italic; padding-top: 1em; display: block; }
 
 .block-download { width: 50%; text-align: center; margin: 0 auto; font-size: 2em; font-weight: lighter; padding-bottom: 1em; 
     @include laptop { width: 65%; font-size: 32px; }
-    @include mobile-wide { width: 95%; }
+    @include palm { width: 100%; }
+    /*@include mobile-wide { width: 95%; }*/
 }
 .block-book_download { width: 15em; }
 .block-img { text-align: center; }
@@ -170,11 +178,16 @@
 .marbot5 { margin-bottom: 5em; }
 .block-press { text-align: center; }
 .block-email { text-align: center; font-size: 1.5em; padding-top: 5px; font-weight: bold; }
-
+.block-email a, .block-email a:visited { color: $brand-color; }
+.block-email a:hover { color: #000; }
 
 /* mailing list */
-#mc_embed_signup input.email { margin: 0 auto !important; text-align: center !important;}
-#mc_embed_signup input.button { background-color: rgba(255,255,255,0) !important; border: 2px solid $brand-color !important; text-transform: uppercase !important; margin-top: 1em !important; text-align: center !important; margin: 1em auto !important; color: $brand-color !important;}
+#mc_embed_signup input { border:0 !important; border-bottom: 2px solid !important; }
+#mc_embed_signup input.email { margin: 0 auto !important; text-align: center !important; width: 80% !important; border-radius: 0 !important; background-color: rgba(255,255,255,0) !important;}
+#mc_embed_signup input.button { width: 45% !important; background-color: rgba(255,255,255,0) !important; border: 2px solid $brand-color !important; text-transform: uppercase !important; margin-top: 1em !important; text-align: center !important; margin: 1em auto !important; color: $brand-color !important;
+    @include palm { margin-top: 40px !important; }
+}
+#mc_embed_signup input.button:hover { background-color: $brand-color !important; color: white !important; }
 
 .footer-row { text-align: center; font-size: .8em; padding: 1em 0; }
 .footer-logo { width: 7em; margin: 0 auto; padding-bottom: 2em; }
