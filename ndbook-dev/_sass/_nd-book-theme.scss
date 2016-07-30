@@ -26,14 +26,28 @@
 .home-link_sticky { color: #fff !important; }
 .home-link_sticky:hover { color: #000 !important; }
 
-.hamburger { display: none;
-    @include palm { display: inline-block;padding-top: 0; font-size: 25px; margin-left: 20px; }
+.hamburger { display: none !important;
+    @include palm { display: inline-block !important;padding-top: 0; font-size: 25px; margin-left: 20px; }
 }
 .js-hamburger-menu { 
     @include palm {display: block; float: none; margin-top: 17px; padding: 0; } }
 .js-hamburger-menu .nd-menu-properties a { 
     @include palm {width: 46%; display: block; text-align: center; margin: 1em auto; border: 0; border-bottom: 1px solid; } }
+/*.js-hamburger-menu .animation {
+    animation: SHW .5s;
+    animation-fill-mode: both;
+}
 
+@keyframes SHW {
+    from {
+        transform:scale(0.7);
+        opacity: 0
+    }
+    to {
+        transform: scale(1);
+        opacity: 1
+    }
+}*/
 
 .nd-intro-section { padding: 2em 0 12em 0;  }
 .nd-intro-hero {
