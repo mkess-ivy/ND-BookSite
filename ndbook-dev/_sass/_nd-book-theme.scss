@@ -12,11 +12,11 @@
 .nd-menu { display: inline-block; float: right; padding-right: 50px; 
     @include mobile-wide { width: 100%; text-align: center; padding-right: 0; float: none; }
 }
-.nd-menu-properties { text-transform: uppercase; border: 2px solid $brand-color; padding: 4px 15px; margin-right: 15px; font-size: 0.8em; color: $brand-color; 
+.nd-menu-properties a { text-transform: uppercase; border: 2px solid $brand-color; padding: 4px 15px; margin-right: 15px; font-size: 0.8em; color: $brand-color; 
     @include mobile-wide { margin-right: 0; }
 }
-.sticky-menu-properties { border-color: #fff !important; color: #fff !important; }
-.sticky-menu-properties:hover { border-color: #000 !important; color: 000 !important; }
+.sticky-menu-properties a { border-color: #fff !important; color: #fff !important; }
+.sticky-menu-properties a:hover { border-color: #000 !important; color: 000 !important; }
 .nd-menu-properties.last { margin-right: none; 
     @include mobile-wide { margin-left: 15px; }
 }
@@ -58,7 +58,7 @@
 .gray { background: #3e3e3e; }*/
 
 .nd-wrapper { width: 1100px; margin: 0 auto;
-    @include laptop { width: 750px; }
+    @include laptop { width: 850px; }
     /*@include palm-wide { margin: 0 2em; }
     @include mobile-wide { margin: 0 1em; }*/
 }
@@ -92,6 +92,7 @@
 }
 .block-link_target { color: white; text-transform: uppercase; font-size: 0.9em; }
 .block-book { width: 35%; position: relative; float: left; text-align: center; padding-top: 3em;
+    @include laptop { width: 40%; }
     @include palm { float: none; margin: 0 auto; }
     @include squeeze { width: 65%; }
 }
@@ -107,8 +108,8 @@
     @include laptop { width: 70%; }
     @include squeeze { width: 85%; font-size: 1.2em; line-height: 1.6em; }
 }
-.btn { border: 2px solid $brand-color; width: 8em; display: block; border-radius: 5px; padding: .5em 0;}
-.btn:hover { border: 2px solid #000; }
+.btn a { border: 2px solid $brand-color; width: 8em; display: block; border-radius: 5px; padding: .5em 0; color: $brand-color; text-decoration: none; margin: 0 auto;}
+.btn a:hover { border: 2px solid #000; color: #000;}
 .btn-brand { text-align: center;margin: 0 auto; text-transform: uppercase;}
 .block-paragraph_container { padding: 1em 0; width: 80%; margin: 0 auto; 
     @include laptop { width: 95%; }
@@ -120,7 +121,7 @@
     @include palm { width: 85%; float: none; margin: 0 auto; padding-right: 0; }
 }
 .block-paragraph.last {
-    @include laptop { padding-left: 2em; padding-right: 0; }
+    @include laptop { padding-left: 2em; }
     @include palm-wide { padding-left: 1em; }
     @include palm { padding-left: 0; }
 }
