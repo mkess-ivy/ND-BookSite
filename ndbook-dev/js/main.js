@@ -40,9 +40,14 @@ $(document).ready(function(){
       var $target = $(target);
 
       $('html, body').stop().animate({
-          'scrollTop': $target.offset().top
+          'scrollTop': ($target.offset().top)-200
       }, 900, 'swing', function () {
           window.location.hash = target;
       });
   });
+
+  // hamburger icon
+  $(".hamburger").click(function() {
+    $(".nd-menu").toggleClass("js-hamburger-menu");
+  })
 });

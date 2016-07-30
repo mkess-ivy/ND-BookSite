@@ -5,12 +5,15 @@
 /* Header */
 .nd-header { padding: 10px; display: inline-block; width: 100%; background: #fff; position: fixed; z-index: 3;}
 .sticky-header { background: #D5843C !important; }
+.nd-logo {
+    @include palm { width: 100%; text-align: center; }
+}
 .nd-logo a { text-transform: uppercase; font-family: $font-2; color: $brand-color; padding-left: 30px; float: left; display: inline-block; 
-    @include palm { float: none; text-align: center; width: 100%; padding-bottom: 2em; padding-left: 0; }
+    @include palm { float: none; text-align: center; padding-left: 0; }
 }
 .sticky-logo a { color: #fff !important; }
 .nd-menu { display: inline-block; float: right; padding-right: 50px; 
-    @include palm { width: 100%; text-align: center; padding-right: 0; float: none; }
+    @include palm { /*width: 100%; text-align: center; padding-right: 0; float: none;*/ display: none; }
 }
 .nd-menu-properties a { text-transform: uppercase; border: 2px solid $brand-color; padding: 4px 15px; margin-right: 15px; font-size: 0.8em; color: $brand-color; 
     /*@include mobile-wide { margin-right: 0; }*/
@@ -22,6 +25,14 @@
 }
 .home-link_sticky { color: #fff !important; }
 .home-link_sticky:hover { color: #000 !important; }
+
+.hamburger { display: none;
+    @include palm { display: inline-block;padding-top: 0; font-size: 25px; margin-left: 20px; }
+}
+.js-hamburger-menu { 
+    @include palm {display: block; float: none; margin-top: 17px; padding: 0; } }
+.js-hamburger-menu .nd-menu-properties a { 
+    @include palm {width: 46%; display: block; text-align: center; margin: 1em auto; border: 0; border-bottom: 1px solid; } }
 
 
 .nd-intro-section { padding: 2em 0 12em 0;  }
