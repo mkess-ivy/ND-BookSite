@@ -27,7 +27,8 @@
 .home-link_sticky:hover { color: #000 !important; }
 
 .hamburger { display: none !important;
-    @include palm { display: inline-block !important;padding-top: 0; font-size: 25px; margin-left: 20px; }
+    @include palm { display: inline-block !important;padding-top: 0; font-size: 25px; margin-left: 20px; transition: transform 0.3s; transition: transform .25s ease-in-out;
+    -webkit-transition: -webkit-transform .25s ease-in-out;}
 }
 .js-hamburger-menu { 
     @include palm {display: block; float: none; margin-top: 17px; padding: 0; } }
