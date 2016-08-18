@@ -34,22 +34,6 @@
     @include palm {display: block; float: none; margin-top: 17px; padding: 0; } }
 .js-hamburger-menu .nd-menu-properties a { 
     @include palm {width: 46%; display: block; text-align: center; margin: 1em auto; border: 0; border-bottom: 1px solid; } }
-/*.js-hamburger-menu .animation {
-    animation: SHW .5s;
-    animation-fill-mode: both;
-}
-
-@keyframes SHW {
-    from {
-        transform:scale(0.7);
-        opacity: 0
-    }
-    to {
-        transform: scale(1);
-        opacity: 1
-    }
-}*/
-
 .nd-intro-section { padding: 2em 0 12em 0;  }
 .nd-intro-hero {
 	background-image: url('/assets/images/author-nicoleduncan.png');
@@ -206,6 +190,10 @@
 .block-email { text-align: center; font-size: 1.5em; padding-top: 5px; font-weight: bold; }
 .block-email a, .block-email a:visited { color: $brand-color; }
 .block-email a:hover { color: #000; }
+.social { padding: 4em 0; text-align: center; }
+.social a { color: black; }
+.fa { padding-left: 0.5em; }
+
 
 /* mailing list */
 #mc_embed_signup input { border:0 !important; border-bottom: 2px solid !important; }
@@ -215,8 +203,13 @@
 }
 #mc_embed_signup input.button:hover { background-color: $brand-color !important; color: white !important; }
 
+/* Footer */
 .footer-row { text-align: center; font-size: .8em; padding: 1em 0; }
 .footer-logo { width: 7em; margin: 0 auto; padding-bottom: 2em; }
+.col3 { width: 33%; float: left; }
+.pad-special { padding-bottom: 1em; }
+.pad-special2 { padding-top: 0.5em; }
+/* #Footer */
 
 /* Clearfix Hack */
 .clearfix:after {
