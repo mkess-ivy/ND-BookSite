@@ -63,6 +63,10 @@
 .block-section { padding: 5em 0; position: relative;
     @include laptop { padding: 9em 0; }
 }
+
+.block-section_alt { 
+    @include laptop { padding: 4em 0; }
+ }
 /*.block-hero { background-image: url('/assets/images/author-hero.png'); background-repeat: no-repeat; background-size: 19%; background-position: 90px 80px;}*/
 /*.blue { background: #c4c4c4; }
 .gray { background: #3e3e3e; }*/
@@ -174,6 +178,13 @@
 .block-tour_city { font-size: 0.9em; }
 .block-tour_city-name { font-style: italic; padding-top: 1em; display: block; }
 
+
+.block-reviews { text-align: center; margin: 0 auto; width: 53%; font-size: 1.3em;
+    @include mobile-wide { width: 90%; font-size: 1.1em; }
+    /*@include laptop { width: 53%; font-size: 1.3em; }*/
+}
+.reviews-spacer { width: 50%; border-bottom: 2px solid $brand-color; margin: 1.2em auto;}
+.icons { text-align: center; padding-bottom: 4em; }
 .block-download { width: 50%; text-align: center; margin: 0 auto; font-size: 2em; font-weight: lighter; padding-bottom: 1em; 
     @include laptop { width: 65%; font-size: 32px; }
     @include palm { width: 100%; }
@@ -183,9 +194,11 @@
 .block-img { text-align: center; }
 .block-bg { background-image: url('/assets/images/pattern-dark.png'); background-size: cover; background-position: center center; background-color: #eeedee;}
 
-.block-title_author { text-align: center; text-transform: uppercase; color: $brand-color; font-size: 50px; font-weight: lighter; padding-bottom: 1em; }
+.block-title_author { text-align: center; text-transform: uppercase; color: $brand-color; font-size: 50px; font-weight: lighter; padding-bottom: 1em; 
+    @include mobile-wide { font-size: 35px; }
+}
 .duncan { font-size: 1.4em; font-weight: lighter; }
-.marbot5 { margin-bottom: 5em; }
+.marbot5 { margin: 5em 0; }
 .block-press { text-align: center; }
 .block-email { text-align: center; font-size: 1.5em; padding-top: 5px; font-weight: bold; }
 .block-email a, .block-email a:visited { color: $brand-color; }
@@ -210,6 +223,9 @@
 .pad-special { padding-bottom: 1em; }
 .pad-special2 { padding-top: 0.5em; }
 /* #Footer */
+
+/* misc styles */
+.nobr { white-space: nowrap; }
 
 /* Clearfix Hack */
 .clearfix:after {
