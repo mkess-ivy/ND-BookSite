@@ -1,0 +1,39 @@
+@mixin laptop { 
+    @media screen and (max-width: #{$on-laptop}) {
+        @content;
+    }
+}
+
+@mixin palm-wide { 
+    @media screen and (max-width: #{$on-palm-wide}) {
+        @content;
+    }
+}
+
+@mixin palm { 
+    @media screen and (max-width: #{$on-palm}) {
+        @content;
+    }
+}
+
+@mixin mobile-wide { 
+    @media screen and (max-width: #{$on-mobile-wide}) {
+        @content;
+    }
+}
+
+@mixin squeeze { 
+    @media screen and (max-width: #{$on-squeeze}) {
+        @content;
+    }
+}
+
+@mixin media-query($device) {
+    @media screen and (max-width: $device) {
+        @content;
+    }
+}
+@mixin small-font {
+    font-size: 18px;
+    line-height: 24px;
+}

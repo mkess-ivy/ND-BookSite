@@ -1,0 +1,30 @@
+<!-- Tour -->
+<section class="block-section block-bg">
+  <div class="nd-wrapper">
+    <div class="block-link_section" id="viewtour">
+      <div class="block-link_target">tour</div>
+    </div>
+
+    <div class="block-col block-col1">
+      <div class="block-tour_title">
+        <span class="tour-year">2016</span><br/>Book Tour Dates
+      </div>
+      
+      {% include modules/newsletter.html %}
+      
+    </div>
+    <div class="block-col block-col2 clearfix">
+      <div class="block-tour_dates" id="viewtour">
+        <ul class="block-tour_col">
+          {% for dates in site.data.tour-dates %}
+          <li class="block-tour_group">
+            <div class="block-tour_day">{{ dates.date }}</div>
+            <div class="block-tour_city">{{ dates.location }}<br/><span class="block-tour_city-name">{{ dates.city }}</span></div>
+          </li>
+          {% endfor %}
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

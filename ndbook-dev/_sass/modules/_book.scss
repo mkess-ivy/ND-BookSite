@@ -1,0 +1,59 @@
+// About the Book
+.block-book { 
+    width: 35%; 
+    position: relative; 
+    float: left; 
+    text-align: center; 
+    padding-top: 3em;
+    @include laptop { 
+        width: 40%; 
+    }
+    @include palm { 
+        float: none; 
+        margin: 0 auto; 
+        width: 50%;
+    }
+    @include squeeze { 
+        width: 65%; 
+    }
+}
+.block-book_text { 
+    width: 59%; 
+    float: left;
+    @include palm { 
+        width: 100%; 
+        margin-bottom: 4em; 
+    }
+}
+.block-book_bigtext { 
+    font-size: 2em; 
+    font-weight: 300; 
+    padding: 2em 0; 
+    text-align: center; 
+    width: 75%; 
+    margin: 0 auto;
+    @include laptop { 
+        width: 85%; 
+    }
+    @include mobile-wide { 
+        font-size: 1.7em; 
+    }
+    @include squeeze {
+        width: 100%; 
+    }
+}
+.block-book_smalltext { 
+    width: 60%; 
+    margin: 0 auto; 
+    font-size: 1.2em;  
+    padding-bottom: 3em; 
+    line-height: 1.3em; 
+    @include laptop { 
+        width: 70%; 
+    }
+    @include squeeze { 
+        width: 85%; 
+        font-size: 1.2em; 
+        line-height: 1.6em; 
+    }
+}

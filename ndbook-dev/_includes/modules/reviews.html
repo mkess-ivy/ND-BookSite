@@ -1,0 +1,37 @@
+<!-- Download -->
+<section class="block-section block-section_alt">
+  <div class="nd-wrapper">
+    <div class="icons"><img src="/assets/images/star.png" width="20"/>&nbsp;&nbsp;<img src="/assets/images/star.png" width="20"/>&nbsp;&nbsp;<img src="/assets/images/star.png" width="20"/></div>
+
+    <!-- Book Reviews -->
+    {% for review in site.data.book-reviews %}
+    <div class="block-reviews">
+      &#8220;{{ review.copy }}&#8221;
+      <div class="reviews-spacer"></div>
+    </div>
+    {% endfor %}
+    <!-- # Book Reviews -->
+
+    <div class="block-img marbot5">
+      <img src="/assets/images/book.jpg" class="block-book_download">
+    </div>
+    <div class="for_purchase">For purchase:</div>
+    <div class="button-wrapper">
+      <div class="button" id="buybook">
+        <a href="https://www.amazon.com/Unmasking-Truth-Sins-Secrets-Salvation/dp/0997677805/ref=sr_1_1?s=books&ie=UTF8&qid=1469756806&sr=1-1&keywords=Unmasking+the+truth+nicole+duncan" target="_blank"><img src="/assets/images/logo-amazon.png" class="amazon-button">
+        </a>
+      </div>
+
+      <!-- Paypal Button -->
+      <div class="button">
+        <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+          <input type="hidden" name="cmd" value="_s-xclick">
+          <input type="hidden" name="hosted_button_id" value="HFZCMJUAVZ8LA">
+          <input type="image" src="/assets/images/logo-paypal.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+          <img alt="" border="0" src="/assets/images/logo-paypal.png" width="1" id="paypal-button" class="button" height="1">
+        </form>
+      </div>
+      <!-- #Paypal Button -->
+    </div>
+  </div>
+</section>

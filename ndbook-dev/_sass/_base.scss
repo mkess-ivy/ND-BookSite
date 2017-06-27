@@ -1,3 +1,7 @@
+@import "variables";
+@import "mixins";
+@import "nd-book-theme";
+
 /* Reset */
 body, h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, hr,
@@ -9,7 +13,7 @@ dl, dd, ol, ul, figure {
 
 /* Basic styling */
 body {
-    font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
+    font-weight: $base-font-weight;
     color: $text-color;
     background-color: $background-color;
     -webkit-text-size-adjust: 100%;
@@ -38,8 +42,6 @@ h1, h2, h3, h4, h5, h6 { font-weight: $base-font-weight; }
 
 /* Links */
 a { text-decoration: none; }
-/*a:hover { color: #000; }*/
-
 
 /* Wrapper */
 .wrapper {
@@ -59,9 +61,6 @@ a { text-decoration: none; }
     }
 }
 
-
-
-
 /* Clearfix */
 %clearfix {
     &:after {
@@ -69,4 +68,7 @@ a { text-decoration: none; }
         display: table;
         clear: both;
     }
+}
+.clear { 
+    clear: both; 
 }

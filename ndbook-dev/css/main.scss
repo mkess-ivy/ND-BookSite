@@ -1,85 +1,18 @@
 ---
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
-@charset "utf-8";
 
-
-
-// Our variables
-$base-font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
-$font-2: "PT Sans", Helvetica, sans-serif;
-$font-3: "Petit Formal Script", cursive, sans-serif;
-$base-font-size:   16px;
-$base-font-weight: 400;
-$small-font-size:  $base-font-size * 0.875;
-$base-line-height: 1.5;
-
-$spacing-unit:     30px;
-
-$text-color:       #111;
-$background-color: #fdfdfd;
-$brand-color:      #D5843C;
-
-$grey-color:       #828282;
-$grey-color-light: lighten($grey-color, 40%);
-$grey-color-dark:  darken($grey-color, 25%);
-
-// Width of the content area
-$content-width:    800px;
-
-$on-laptop:			1100px;
-$on-palm-wide:      900px;
-$on-palm:			750px;
-$on-mobile-wide:	550px;
-$on-squeeze:		380px;
-
-
-@mixin laptop { 
-    @media screen and (max-width: #{$on-laptop}) {
-        @content;
-    }
-}
-
-@mixin palm-wide { 
-    @media screen and (max-width: #{$on-palm-wide}) {
-        @content;
-    }
-}
-
-@mixin palm { 
-    @media screen and (max-width: #{$on-palm}) {
-        @content;
-    }
-}
-
-@mixin mobile-wide { 
-    @media screen and (max-width: #{$on-mobile-wide}) {
-        @content;
-    }
-}
-
-@mixin squeeze { 
-    @media screen and (max-width: #{$on-squeeze}) {
-        @content;
-    }
-}
-
-
-
-
-@mixin media-query($device) {
-    @media screen and (max-width: $device) {
-        @content;
-    }
-}
-
-
-
-
-
-// Import partials from `sass_dir` (defaults to `_sass`)
-@import
-        "base",
-        "nd-book-theme",
-        "syntax-highlighting"
-;
+@import "base";
+@import "nd-book-theme";
+@import "syntax-highlighting";
+@import "variables";
+@import "mixins";
+@import "header";
+@import "modules/bio";
+@import "modules/book";
+@import "modules/footer";
+@import "modules/newsletter";
+@import "modules/reviews";
+@import "modules/testimonials";
+@import "modules/tourdates";
+@import "modules/loader";

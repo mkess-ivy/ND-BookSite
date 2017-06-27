@@ -18,13 +18,13 @@ $(document).ready(function(){
         //Add the "sticky" class
         $('.nd-header').addClass('sticky-header');
         $('.nd-logo').addClass('sticky-logo');
-        $('.nd-menu-properties').addClass('sticky-menu-properties');
+        $('.menu-properties').addClass('sticky-menu-properties');
         $('.home-link').addClass('home-link_sticky');
       } else {
         //Else remove it.
         $('.nd-header').removeClass('sticky-header');
         $('.nd-logo').removeClass('sticky-logo');
-        $('.nd-menu-properties').removeClass('sticky-menu-properties');
+        $('.menu-properties').removeClass('sticky-menu-properties');
         $('.home-link').removeClass('home-link_sticky');
       }
     });
@@ -32,22 +32,16 @@ $(document).ready(function(){
   //Call it on resize.
   }).resize();
 
-    // Smooth Scroll
-  //   $('a[href^="#"]').on('click',function (e) {
-  //     e.preventDefault();
-
-  //     var target = this.hash;
-  //     var $target = $(target);
-
-  //     $('html, body').stop().animate({
-  //         'scrollTop': ($target.offset().top)-200
-  //     }, 900, 'swing', function () {
-  //         window.location.hash = target;
-  //     });
-  // });
 
   // hamburger icon
-  $(".hamburger").click(function() {
-    $(".nd-menu").toggleClass("js-hamburger-menu");
-  })
+  $(".menu-btn").click(function(e) {
+    e.preventDefault();
+    $(".responsive-menu").fadeToggle("slow");
+    
+  });
+
+  // site preloader -- also uncomment the div in the header and the css style for #preloader
+  $(window).load(function(){
+    $('#preloader').fadeOut('slow',function(){$(this).remove();});
+  });
 });

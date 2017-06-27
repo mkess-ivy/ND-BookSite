@@ -1,0 +1,80 @@
+// Tour Dates Module
+.block-col { 
+    padding: 1em 0; 
+    float: left; 
+    @include palm { 
+        float: none; 
+    }
+}
+.block-col1 { 
+    width: 40%; 
+    padding-left: 1em;
+    @include palm { 
+        width: 90%; 
+        margin: 0 auto; 
+        padding: 0; 
+    }
+}
+.block-col2 { 
+    width: 55%; 
+    padding-top: 5em; 
+    float: right;
+    @include laptop { 
+        padding-top: 3em; 
+    }
+    @include palm { 
+        width: 100%; 
+        margin: 0 auto; 
+    }
+    @include mobile-wide { 
+        width: 100%; 
+    }
+}
+
+.block-tour_col { 
+    width: 80%; 
+    margin: 0 auto;
+}
+.block-tour_group { 
+    padding: 0.8em; 
+    text-align: center; 
+    width: 50%;
+    float: left;
+    list-style: none;
+    height: 150px;
+    @include laptop { 
+        width: 95%; 
+    }
+    @include palm-wide { 
+        width: 90%; 
+        padding: 0.4em; 
+        margin-bottom: 2em; 
+    }
+}
+.block-tour_day { 
+    text-transform: uppercase; 
+    font-weight: bold; 
+    font-size: 1.3em; 
+    line-height: 44px;
+}
+.block-tour_title { 
+    font-size: 2.5em; 
+    font-family: $font-3; 
+    width: 80%; 
+    text-align: center; 
+    margin: 0 auto; 
+    @include palm-wide { 
+        width: 100%; 
+    }
+}
+.block-tour_city { 
+    font-size: 0.9em; 
+}
+.block-tour_city-name { 
+    font-style: italic; 
+    padding-top: 1em; 
+    display: block; 
+}
+.tour-year {
+    @include small-font;
+}

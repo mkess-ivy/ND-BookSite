@@ -1,243 +1,176 @@
-*, *:before, *:after {
+/** Contents:
+*
+*
+* Layout
+* Wrappers
+* Image Properties
+* Links
+* Special Links (Paypal and Amazon)
+* Misc
+*
+*
+*/
+
+*, 
+*:before, 
+*:after {
   box-sizing: border-box;
 }
 
-/* Header */
-.nd-header { padding: 10px; display: inline-block; width: 100%; background: #fff; position: fixed; z-index: 3;}
-.sticky-header { background: #D5843C !important; }
-.nd-logo {
-    @include palm { width: 100%; text-align: center; }
-}
-.nd-logo a { text-transform: uppercase; font-family: $font-2; color: $brand-color; padding-left: 30px; float: left; display: inline-block; 
-    @include palm { float: none; text-align: center; padding-left: 0; }
-}
-.sticky-logo a { color: #fff !important; }
-.nd-menu { display: inline-block; float: right; padding-right: 50px; 
-    @include palm { /*width: 100%; text-align: center; padding-right: 0; float: none;*/ display: none; }
-}
-.nd-menu-properties a { text-transform: uppercase; border: 2px solid $brand-color; padding: 4px 15px; margin-right: 15px; font-size: 0.8em; color: $brand-color; 
-    /*@include mobile-wide { margin-right: 0; }*/
-}
-.sticky-menu-properties a { border-color: #fff !important; color: #fff !important; }
-.sticky-menu-properties a:hover { border-color: #000 !important; color: 000 !important; }
-.nd-menu-properties.last { margin-right: none; 
-    /*@include mobile-wide { margin-left: 15px; }*/
-}
-.home-link_sticky { color: #fff !important; }
-.home-link_sticky:hover { color: #000 !important; }
 
-.hamburger { display: none !important;
-    @include palm { display: inline-block !important;padding-top: 0; font-size: 25px; margin-left: 20px; transition: transform 0.3s; transition: transform .25s ease-in-out;
-    -webkit-transition: -webkit-transform .25s ease-in-out;}
+// Layout
+.block-section { 
+    padding: 5em 0; 
+    position: relative;
+    @extend %clearfix;
+    @include laptop { 
+        padding: 3em 0 7em; 
+    }
 }
-.js-hamburger-menu { 
-    @include palm {display: block; float: none; margin-top: 17px; padding: 0; } }
-.js-hamburger-menu .nd-menu-properties a { 
-    @include palm {width: 46%; display: block; text-align: center; margin: 1em auto; border: 0; border-bottom: 1px solid; } }
-.nd-intro-section { padding: 2em 0 12em 0;  }
-.nd-intro-hero {
-	background-image: url('/assets/images/author-nicoleduncan.png');
-	background-size: cover;
-	height: 190vh;
-	position: relative;
-	margin: 30px 0 0 65px;
-	width: 30%;
-	float: left;
-}
-.nd-intro-text { float: left; width: 60%; text-align: center; }
-.nd-intro-text_title { padding: 2em 0; font-size: 4em; font-family: $font-3;  }
-
-.nd-blockquote_container { padding-left: 5em; }
-.nd-blockquote { text-align: left; font-family: $base-font-family; padding-bottom: 7em; font-weight: 200;}
-.nd-blockquote_author { text-align: right; padding: 1em 5em 0 0; font-size: 0.8em; color: $brand-color; line-height: 1.3em;}
-
-.nd-book-section { background: #EEEDEE !important; background-image: url('/assets/images/pattern-dark.png'); padding: 5px; position: relative; }
-.nd-book_img { width: 40%; float: left; }
-.nd-book_text { width: 50%; float: left; }
-
-.clear { clear: both; }
-.nd-section { background: red; padding: 5em 0; position: relative;  }
-
-
-/* Setting up wireframe */
-.block-section { padding: 5em 0; position: relative;
-    @include laptop { padding: 9em 0; }
-}
-
 .block-section_alt { 
-    @include laptop { padding: 4em 0; }
+    @include laptop { 
+        padding: 4em 0; 
+    }
  }
-/*.block-hero { background-image: url('/assets/images/author-hero.png'); background-repeat: no-repeat; background-size: 19%; background-position: 90px 80px;}*/
-/*.blue { background: #c4c4c4; }
-.gray { background: #3e3e3e; }*/
-
-.nd-wrapper { width: 1100px; margin: 0 auto;
-    @include laptop { width: 850px; }
-    @include palm-wide { width: 750px; }
-    @include palm { width: 500px; }
-    @include mobile-wide { width: 370px; }
-    @include squeeze { width: 300px; }
+.block-bg { 
+    background-size: cover; 
+    background-position: center center; 
+    background-color: $brand-color-lighter;
 }
-.block-hero_v2 { float: left; position: absolute; left: 15em; 
-    @include laptop { left: 6em; }
-    @include palm-wide { left: 2em; }
-  /*  @include palm { left: 1em; }*/
-    @include palm { left: 37%; top: 30%; }
-    @include squeeze { left: 28%; top: 34%;}
-}
-.nicole { width: 14em; 
-    /*@include palm { opacity: 0.5; }*/
-    @include palm { opacity: 0.3; width: 12em;}
-
-}
-.block-testimonial { width: 52%; padding: 2em 0; float: right; position: relative; margin-right: 5em;
-    @include laptop { width: 60%; margin-right: 1em; }
-    @include palm { width: 100%; margin-right: 0;}
-}
-.block-testimonial_title { font-family: $font-3; font-size: 3em; text-align: center; padding-bottom: 1.5em; width: 90%; margin: 0 auto;
-    @include mobile-wide { font-size: 2.5em; }
-}
-.block-testimonial_text { width: 75%; margin: 0 auto; 
-    @include laptop { width: 90%; }
-    /*@include palm { width: 60%; float: right; }*/
-    @include palm { width: 90%; float: none; margin: 0 auto; }
-}
-.block-author { text-align: right; padding: 1em 3em 1em 0; color: $brand-color;}
-.block-link_section { position: absolute; top: -2em; width: 55px; height: 55px; right: 50%; background: $brand-color; border-radius: 50%; text-align: center; padding-top: 15px;
-    @include laptop { right: 48%; }
-    @include palm { right: 45%; }
-    @include squeeze { right: 42%; }
-}
-.block-link_target { color: white; text-transform: uppercase; font-size: 0.9em; }
-.block-book { width: 35%; position: relative; float: left; text-align: center; padding-top: 3em;
-    @include laptop { width: 40%; }
-    @include palm { float: none; margin: 0 auto; width: 50%;}
-    @include squeeze { width: 65%; }
-}
-.block-book_text { width: 59%; float: left; /*margin-left: 5em;*/ 
-    @include palm { width: 100%; margin-bottom: 4em; }
-}
-.block-book_bigtext { font-size: 2em; font-weight: 300; padding: 2em 0; text-align: center; width: 75%; margin: 0 auto;
-    @include laptop { width: 85%; }
-    @include mobile-wide { font-size: 1.7em; }
-    @include squeeze { width: 100%; }
-}
-.block-book_smalltext { width: 60%; margin: 0 auto; font-size: 1.2em;  padding-bottom: 3em; line-height: 1.3em; 
-    @include laptop { width: 70%; }
-    @include squeeze { width: 85%; font-size: 1.2em; line-height: 1.6em; }
-}
-.btn a { border: 2px solid $brand-color; width: 8em; display: block; border-radius: 5px; padding: .5em 0; color: $brand-color; text-decoration: none; margin: 0 auto;}
-.btn a:hover { border: 2px solid #000; color: #000;}
-.btn-brand { text-align: center;margin: 0 auto; text-transform: uppercase;}
-.block-paragraph_container { padding: 1em 0; width: 80%; margin: 0 auto; 
-    @include laptop { width: 95%; }
-    @include palm-wide { width: 100%; }
-}
-.block-paragraph { width: 50%; float: left; padding: 0 2em;
-    @include laptop { padding-right: 2em; }
-    @include palm-wide { padding-right: 1em; }
-    @include palm { width: 85%; float: none; margin: 0 auto; padding: 0; }
-}
-.block-paragraph.last {
-    @include laptop { padding-left: 2em; }
-    @include palm-wide { padding-left: 1em; }
-    @include palm { padding-left: 0; }
-}
-.block-paragraph p { text-align: justify; padding-bottom: 2em;}
-/*.block-paragraph.last { padding-right: 0; }*/
-.block-col { padding: 1em 0; float: left; 
-    @include palm { float: none; }
-}
-.block-col1 { width: 40%; padding-left: 1em;
-    @include palm { width: 90%; margin: 0 auto; padding: 0; }
-}
-.block-col2 { width: 55%; padding-top: 5em; float: right;
-    @include laptop { padding-top: 3em; }
-    @include palm { width: 100%; margin: 0 auto; }
-    @include mobile-wide { width: 100%; }
-}
-.block-newsletter_container { padding: 4em 0; width: 80%; margin: 0 auto; text-align: center; 
-    @include palm-wide { width: 95%; }
-}
-.block-newsletter_text { width: 80%; margin: 0 auto; padding-bottom: 2em;
-    @include palm-wide { width: 100%; }
-}
-.block-tour_col { width: 50%; float: left; 
-    @include palm { width: 70%; float: none; margin: 0 auto; }
-    @include squeeze { width: 85%; }
-}
-.block-tour_group { padding: 1em; text-align: center; width: 75%; margin: 0 auto; 
-    @include laptop { width: 95%; }
-    @include palm-wide { width: 90%; padding: 0.4em; margin-bottom: 2em; }
-}
-.block-tour_day { text-transform: uppercase; font-weight: bold; font-size: 1.3em; }
-.block-tour_title { font-size: 2.5em; font-family: $font-3; width: 80%; text-align: center; margin: 0 auto; 
-    @include palm-wide { width: 100%; }
-    /*@include mobile-wide { width: 100%; }*/
-}
-.block-tour_city { font-size: 0.9em; }
-.block-tour_city-name { font-style: italic; padding-top: 1em; display: block; }
 
 
-.block-reviews { text-align: center; margin: 0 auto; width: 53%; font-size: 1.3em;
-    @include mobile-wide { width: 90%; font-size: 1.1em; }
-    /*@include laptop { width: 53%; font-size: 1.3em; }*/
+ // Wrappers
+.nd-wrapper { 
+    width: 1100px; 
+    margin: 0 auto;
+    @include laptop { 
+        width: 850px; 
+    }
+    @include palm-wide { 
+        width: 750px; 
+    }
+    @include palm { 
+        width: 500px; 
+    }
+    @include mobile-wide { 
+        width: 370px; 
+    }
+    @include squeeze { 
+        width: 300px; 
+    }
 }
-.reviews-spacer { width: 50%; border-bottom: 2px solid $brand-color; margin: 1.2em auto;}
-.icons { text-align: center; padding-bottom: 4em; }
-.block-download { width: 50%; text-align: center; margin: 0 auto; font-size: 2em; font-weight: lighter; padding-bottom: 1em; 
-    @include laptop { width: 65%; font-size: 32px; }
-    @include palm { width: 100%; }
-    /*@include mobile-wide { width: 95%; }*/
+.block-hero_v2 { 
+    float: left; 
+    position: absolute; 
+    left: 15em; 
+    @include laptop { 
+        left: 6em; 
+    }
+    @include palm-wide { 
+        left: 2em; 
+    }
+    @include palm { 
+        left: 37%; 
+        top: 30%; 
+    }
+    @include squeeze { 
+        left: 28%; 
+        top: 34%;
+    }
 }
-.block-book_download { width: 15em; }
-.block-img { text-align: center; }
-.block-bg { background-image: url('/assets/images/pattern-dark.png'); background-size: cover; background-position: center center; background-color: #eeedee;}
 
-.block-title_author { text-align: center; text-transform: uppercase; color: $brand-color; font-size: 50px; font-weight: lighter; padding-bottom: 1em; 
-    @include mobile-wide { font-size: 35px; }
+
+// Image Properties
+.nicole { 
+    width: 14em;
+    @include palm { 
+        opacity: 0.3; 
+        width: 12em;
+    }
 }
-.duncan { font-size: 1.4em; font-weight: lighter; }
-.marbot5 { margin: 5em 0; }
-.block-press { text-align: center; }
-.block-email { text-align: center; font-size: 1.5em; padding-top: 5px; font-weight: bold; }
-.block-email a, .block-email a:visited { color: $brand-color; }
-.block-email a:hover { color: #000; }
-.social { padding: 4em 0; text-align: center; }
-.social a { color: black; }
-.fa { padding-left: 0.5em; }
 
 
-/* mailing list */
-#mc_embed_signup input { border:0 !important; border-bottom: 2px solid !important; }
-#mc_embed_signup input.email { margin: 0 auto !important; text-align: center !important; width: 80% !important; border-radius: 0 !important; background-color: rgba(255,255,255,0) !important;}
-#mc_embed_signup input.button { width: 45% !important; background-color: rgba(255,255,255,0) !important; border: 2px solid $brand-color !important; text-transform: uppercase !important; margin-top: 1em !important; text-align: center !important; margin: 1em auto !important; color: $brand-color !important;
-    @include palm { margin-top: 40px !important; }
+// Links
+.btn a { 
+    border: 2px solid $brand-color; 
+    width: 8em; 
+    display: block; 
+    border-radius: 5px; 
+    padding: .5em 0; 
+    color: $brand-color; 
+    text-decoration: none; 
+    margin: 0 auto;
+    cursor: pointer;
 }
-#mc_embed_signup input.button:hover { background-color: $brand-color !important; color: white !important; }
+.btn a:hover { 
+    border: 2px solid #000; 
+    color: #000;
+    cursor: pointer;
+}
+.btn-brand { 
+    text-align: center;
+    margin: 0 auto; 
+    text-transform: uppercase;
+}
+.block-link_section { 
+    position: absolute; 
+    top: -2em; 
+    width: 55px; 
+    height: 55px; 
+    right: 50%; 
+    background: $brand-color; 
+    border-radius: 50%; 
+    text-align: center; 
+    padding-top: 15px;
+    @include laptop { 
+        right: 48%; 
+    }
+    @include palm { 
+        right: 45%; 
+    }
+    @include squeeze { 
+        right: 42%; 
+    }
+}
+.block-link_target { 
+    color: white; 
+    text-transform: uppercase; 
+    font-size: 0.9em; 
+}
 
-/* Footer */
-.footer-row { text-align: center; font-size: .8em; padding: 1em 0; }
-.footer-logo { width: 7em; margin: 0 auto; padding-bottom: 2em; }
-.col3 { width: 33%; float: left; }
-.pad-special { padding-bottom: 1em; }
-.pad-special2 { padding-top: 0.5em; }
-/* #Footer */
 
-/* misc styles */
-.nobr { white-space: nowrap; }
+// Special Links (Paypal and Amazon)
+.button {
+    display: inherit;
+    float: left;
+    margin-right: 15px;
+}
+#paypal-button,
+.button input {
+    width: 55px;
+}
+.amazon-button {
+    width: 130px;
+}
+.button form {
+    width: 75px;
+}
+.button-wrapper {
+    display: inherit;
+    width: 236px;
+    margin: auto;
+}
+.for_purchase {
+    @include small-font;
+    text-align: center;
+    margin-bottom: 25px;
+}
 
-/* Clearfix Hack */
-.clearfix:after {
-     visibility: hidden;
-     display: block;
-     font-size: 0;
-     content: " ";
-     clear: both;
-     height: 0;
-     }
-.clearfix { display: inline-block; }
-/* start commented backslash hack \*/
-* html .clearfix { height: 1%; }
-.clearfix { display: block; }
-/* close commented backslash hack */
+
+// Misc
+.nobr { 
+    white-space: nowrap; 
+}
+.marbot5 { 
+    margin: 5em 0; 
+}

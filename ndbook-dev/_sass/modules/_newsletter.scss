@@ -1,0 +1,58 @@
+// Newsletter Module
+.block-newsletter_container { 
+    padding: 4em 0; 
+    width: 80%; 
+    margin: 0 auto; 
+    text-align: center; 
+    @include palm-wide { 
+        width: 95%; 
+    }
+}
+.block-newsletter_text { 
+    width: 80%; 
+    margin: 0 auto; 
+    padding-bottom: 2em;
+    @include small-font;
+    @include palm-wide { 
+        width: 100%; 
+    }
+}
+#mc_embed_signup input { 
+    border:0 !important; 
+    border-bottom: 2px solid !important; 
+}
+#mc_embed_signup input.button {
+    height: 38px !important;
+}
+#mc_embed_signup input.email { 
+    margin: 0 auto !important; 
+    text-align: center !important; 
+    width: 80% !important; 
+    border-radius: 0 !important; 
+    background-color: rgba(255,255,255,0) !important;
+}
+#mc_embed_signup input.button { 
+    min-width: 120px !important;
+    background-color: rgba(255,255,255,0) !important; 
+    border: 2px solid $brand-color !important; 
+    text-transform: uppercase !important; 
+    margin-top: 1em !important; 
+    text-align: center !important; 
+    margin: 1em auto !important; 
+    color: $brand-color !important;
+    margin-left: -22px !important;
+    @include palm { 
+        margin-top: 40px !important; 
+    }
+}
+#mc_embed_signup input.button:hover { 
+    background-color: $brand-color !important; 
+    color: white !important; 
+}
+.submit {
+    display: block !important;
+    margin: auto;
+    text-align: center;
+    height: auto;
+    width: 100px;    
+}

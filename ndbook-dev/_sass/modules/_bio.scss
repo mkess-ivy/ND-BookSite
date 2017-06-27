@@ -1,0 +1,62 @@
+// Bio Module
+.block-paragraph_container { 
+    padding: 1em 0; 
+    width: 80%;
+     margin: 0 auto; 
+    @include laptop { 
+        width: 95%; 
+    }
+    @include palm-wide { 
+        width: 100%; 
+    }
+}
+.block-paragraph { 
+    width: 50%; 
+    float: left; 
+    padding: 0 2em;
+    @extend %clearfix;
+    @include laptop { 
+        padding-right: 2em; 
+    }
+    @include palm-wide { 
+        padding-right: 1em; 
+    }
+    @include palm { 
+        width: 85%; 
+        float: none; 
+        margin: 0 auto; 
+        padding: 0; 
+    }
+}
+.block-paragraph.last {
+    @include laptop { 
+        padding-left: 2em; 
+    }
+    @include palm-wide { 
+        padding-left: 1em; 
+    }
+    @include palm { 
+        padding-left: 0; 
+    }
+}
+.block-paragraph p { 
+    text-align: justify; 
+    padding-bottom: 2em;
+    @include small-font;
+}
+.block-title_author { 
+    text-align: center; 
+    text-transform: uppercase; 
+    color: $brand-color; 
+    font-size: 50px; 
+    font-weight: lighter; 
+    padding-bottom: 1em;
+    padding: 75px 0 16px;
+    @include mobile-wide { 
+        font-size: 35px; 
+    }
+}
+.duncan { 
+    font-size: 1.4em; 
+    font-weight: lighter; 
+}

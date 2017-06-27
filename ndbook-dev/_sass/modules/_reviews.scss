@@ -1,0 +1,41 @@
+// Reviews
+.block-reviews { 
+    text-align: center; 
+    margin: 0 auto; 
+    width: 53%; 
+    font-size: 1.3em;
+    @include mobile-wide { 
+        width: 90%; 
+        @include small-font;
+    }
+}
+.reviews-spacer { 
+    width: 50%; 
+    border-bottom: 2px solid $brand-color; 
+    margin: 1.2em auto;
+}
+.icons { 
+    text-align: center; 
+    padding-bottom: 4em; 
+}
+.block-download { 
+    width: 50%; 
+    text-align: center; 
+    margin: 0 auto; 
+    font-size: 2em; 
+    font-weight: lighter; 
+    padding-bottom: 1em; 
+    @include laptop { 
+        width: 65%; 
+        font-size: 32px; 
+    }
+    @include palm { 
+        width: 100%; 
+    }
+}
+.block-book_download { 
+    width: 15em; 
+}
+.block-img { 
+    text-align: center; 
+}

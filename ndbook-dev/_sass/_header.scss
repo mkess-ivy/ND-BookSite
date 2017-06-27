@@ -1,0 +1,180 @@
+/* Header */
+.nd-header { 
+    // padding: 10px; 
+    display: inline-block; 
+    width: 100%; 
+    background: #fff; 
+    position: fixed; 
+    z-index: 3;
+}
+.sticky-header { 
+    background: #D5843C !important;
+    transition: .9s;
+    -webkit-transition: .9s;
+}
+.nd-logo {
+    @include palm { 
+        width: 100%; 
+        text-align: center; 
+    }
+}
+.nd-logo a.text-logo { 
+    text-transform: uppercase; 
+    font-family: $font-2; 
+    color: $brand-color; 
+    padding: 15px; 
+    float: left; 
+    display: inline-block; 
+    @include palm { 
+        float: none; 
+        text-align: center; 
+        padding-left: 0;
+    }
+}
+.sticky-logo a { 
+    color: #fff !important; 
+}
+// .nd-menu { 
+// display: inline-block; 
+// float: right; 
+// padding-right: 50px; 
+//     @include palm { 
+//         display: none; 
+//     }
+// }
+// .nd-menu-properties a { 
+//     text-transform: uppercase; 
+//     border: 2px solid $brand-color; 
+//     padding: 4px 15px; 
+//     margin-right: 15px; 
+//     font-size: 0.8em; 
+//     color: $brand-color; 
+// }
+.sticky-menu-properties a { 
+    border-color: #fff !important; 
+    color: #fff !important; 
+}
+.nd-menu-properties a:hover,
+.sticky-menu-properties a:hover { 
+    border-color: #000 !important; 
+    color: 000 !important; 
+}
+// .nd-menu-properties.last { 
+//     margin-right: none; 
+// }
+.home-link_sticky { 
+    color: #fff !important; 
+}
+.home-link_sticky:hover { 
+    color: #000 !important; 
+}
+
+.hamburger { 
+    display: none !important;
+    @include palm { 
+        display: inline-block !important;
+        padding-top: 0; 
+        font-size: 25px; 
+        margin-left: 20px; 
+        transition: transform 0.3s; 
+        transition: transform .25s ease-in-out;
+    -webkit-transition: -webkit-transform .25s ease-in-out;
+}
+}
+// .js-hamburger-menu { 
+//     @include palm {
+//         display: block; 
+//         float: none; 
+//         margin-top: 17px; 
+//         padding: 0; 
+//         transition: 0.5s;
+//     } 
+// }
+// .js-hamburger-menu .nd-menu-properties a { 
+//     @include palm {
+//         width: 46%; 
+//         display: block; 
+//         text-align: center; 
+//         margin: 1em auto; 
+//         border: 0; 
+//         border-bottom: 1px solid; 
+//     } 
+// }
+.menu-properties {
+    
+    list-style: none;
+    @include palm {
+       padding-top: 25px; 
+    }
+}
+.menu-properties li {
+    text-align: center;
+    font-size: 18px;
+    line-height: 24px;
+    @include palm {
+        padding: 15px 0; 
+        line-height: 34px;   
+    }
+}
+.menu-properties li a {
+    color: $brand-color;
+}
+.menu-properties li a:hover {
+        border-bottom: 2px solid;
+        padding-bottom: 5px;    
+  
+}
+.responsive-menu {
+    @include palm {
+        display: none;
+        height: 170px;
+        width: 100%;
+        padding: 0;
+        margin: 0;    
+    } 
+}
+.desktop-menu {
+   display: block;
+   float: right;
+   width: 32%;
+   max-width: 215px;
+   margin:0;
+   padding:0;
+   margin-top:7px;
+   @include palm {
+    float: none;
+    width: auto;
+    display: none;
+    max-width: none;
+   } 
+}
+.desktop-menu li {
+    float: left;
+    width: auto;
+    display: inline-block;
+    margin-right: 30px;
+    @include palm {
+        float: none;
+        display: block;
+        margin-right: 0;
+        text-align: center;
+    }
+}
+.desktop-menu li:last-child {
+    margin-right: 0;
+}
+// .expand {
+//     display: block !important;
+//     transition: all 0.5s ease;
+
+// }
+.menu {
+    display: none;
+    @include palm {
+        display: block;
+    }
+}
+a.menu-btn {
+    font-size: 52px;
+    color: $brand-color;
+}
